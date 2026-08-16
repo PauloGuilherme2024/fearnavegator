@@ -1,9 +1,19 @@
-plugins { id("com.android.application"); id("org.jetbrains.kotlin.android"); id("org.jetbrains.kotlin.plugin.compose") }
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.compose")
+}
 
 android {
     namespace = "com.fearnavegator.warframe"
     compileSdk = 35
-    defaultConfig { applicationId = "com.fearnavegator.warframe"; minSdk = 26; targetSdk = 35; versionCode = 1; versionName = "0.1.0" }
+    defaultConfig {
+        applicationId = "com.fearnavegator.warframe"
+        minSdk = 26
+        targetSdk = 35
+        versionCode = 1
+        versionName = "1.0.0"
+    }
     buildFeatures { compose = true }
     kotlinOptions { jvmTarget = "17" }
 }
@@ -16,8 +26,5 @@ dependencies {
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("com.google.mlkit:text-recognition:16.0.1")
-    implementation("androidx.room:room-runtime:2.7.1")
-    implementation("androidx.room:room-ktx:2.7.1")
-    annotationProcessor("androidx.room:room-compiler:2.7.1")
     debugImplementation("androidx.compose.ui:ui-tooling")
 }
