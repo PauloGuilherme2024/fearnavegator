@@ -7,6 +7,7 @@ plugins {
 android {
     namespace = "com.fearnavegator.warframe"
     compileSdk = 35
+
     defaultConfig {
         applicationId = "com.fearnavegator.warframe"
         minSdk = 26
@@ -14,8 +15,19 @@ android {
         versionCode = 1
         versionName = "1.0.0"
     }
-    buildFeatures { compose = true }
-    kotlinOptions { jvmTarget = "17" }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        compose = true
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
 }
 
 dependencies {
